@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: black;
+  font-size: 1.8rem;
+  background-color: #fff;
+  gap: 2.5rem;
+  display: grid;
+  grid-template-areas: ". . . . " ". . . . " ". logo . ." ". logo main main" ". . . . ";
+}
+
+span {
+  color: #89cd00;
+}
+
+aside {
+  grid-area: logo;
+  padding: 1.8rem;
+  text-align: center;
+}
+aside h1 {
+  font-size: 5.6rem;
+  font-weight: 50rem;
+}
+aside img {
+  width: 65rem;
+  height: 65rem;
+}
+
+main {
+  grid-area: main;
+  width: 80rem;
+  height: 60rem;
+  padding: 4.4rem;
+  text-align: center;
+  border: 1px solid #d4d4d4;
+  border-radius: 1.2rem;
+}
+main h2 {
+  margin-left: 12rem;
+  font-size: 3.6rem;
+  width: 45rem;
+  font-weight: 50rem;
+  text-align: justify;
+}
+main .controller {
+  margin: 4rem;
+  display: flex;
+  flex-direction: column;
+  font-size: 3.6rem;
+}
+main .controller a {
+  background-color: rgb(60, 191, 196);
+  color: #fff;
+  text-decoration: none;
+  height: 7rem;
+  margin-top: 3.5rem;
+  border-radius: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .controller a + a {
+  background-color: #89cd00;
+}
+main footer {
+  margin: 2rem;
+}
+main footer p {
+  margin: 1rem;
+  font-size: 2rem;
+}
+main footer a {
+  margin-top: 4rem;
+  font-size: 2.5rem;
+}/*# sourceMappingURL=style.css.map */
