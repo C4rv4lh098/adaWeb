@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novo Cadastro</title>
+    <link rel="stylesheet" href="../css/styleCadastroEntidade.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/d46481d276.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <aside>
+        <img src="../asset/3270969.jpg" alt="Logo">
+        <h1><span>We</span> Form</h1>
+    </aside>
+    <main>
+        <h2><i class="fa-solid fa-chevron-left"></i>Nova <span>entidade</span></h2>
+
+        <div class="data-input">
+            <label for="name">Nome</label>
+            <input type="text" placeholder="Nome da Entidade">
+
+            <label for="atuacao">Campo de Atuação</label>
+            <select name="atuacao" id="atuacao">
+                <option value="none" selected disabled>Informe uma Opção</option>
+                <option value="abrigo">Abrigo</option>
+                <option value="clinica">Clinica</option>
+                <option value="resgate">Resgate</option>
+                <option value="adocao">Adoção</option>
+            </select>            
+            <i class="fa-solid fa-chevron-down"></i>
+
+            
+            <label for="coleta">Pontos de Coleta</label>
+            <input type="text" placeholder="Local de Coleta">
+            <i class="fa-solid fa-circle-plus"></i>
+        </div>
+
+        <div class="controller">
+            <button type="submit" id="cadastrar">Cadastrar</button>
+        </div>
+
+    </main>
+</body>
+</html>

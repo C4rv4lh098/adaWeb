@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: black;
+  font-size: 1.8rem;
+  background-color: #fff;
+  gap: 1.8rem;
+  display: grid;
+  grid-template-areas: ". . . . ." ". logo logo . ." ". logo logo main ." ". logo logo main .";
+}
+
+span {
+  color: #89cd00;
+}
+
+aside {
+  grid-area: logo;
+  padding: 1.8rem;
+  text-align: center;
+}
+aside h1 {
+  font-size: 5.6rem;
+  font-weight: 50rem;
+}
+aside img {
+  width: 65rem;
+  height: 65rem;
+}
+
+main {
+  grid-area: main;
+  width: 80rem;
+  height: 70rem;
+  padding: 4.4rem;
+  border: 1px solid #d4d4d4;
+  border-radius: 1.2rem;
+}
+main .fa-chevron-left {
+  color: #89cd00;
+  margin-right: 2rem;
+}
+main h2 {
+  margin-top: 1rem;
+  font-size: 3.6rem;
+  width: 45rem;
+  font-weight: 50rem;
+  text-align: justify;
+}
+main .data-input {
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+}
+main .data-input label {
+  display: block;
+  margin-top: 3rem;
+  font-size: 2.6rem;
+}
+main .data-input .fa-chevron-down {
+  color: rgb(60, 191, 196);
+  font-size: 3rem;
+  position: relative;
+  top: -4rem;
+  left: 65rem;
+  font-weight: 50rem;
+}
+main .data-input input, main .data-input select {
+  color: #000;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  height: 5rem;
+  width: 70rem;
+  border-radius: 1rem;
+  border: 1px solid #d4d4d4;
+}
+main .data-input select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+main .data-input .fa-circle-plus {
+  color: rgb(60, 191, 196);
+  font-size: 3.5rem;
+  position: relative;
+  margin-top: -4rem;
+  margin-left: 71rem;
+}
+main .controller {
+  margin-top: 8rem;
+}
+main .controller #cadastrar {
+  border: none;
+  border-radius: 1.2rem;
+  color: #fff;
+  background-color: rgb(60, 191, 196);
+  width: 70rem;
+  height: 7rem;
+  font-size: 2.8rem;
+  cursor: pointer;
+}/*# sourceMappingURL=styleCadastroEntidade.css.map */
