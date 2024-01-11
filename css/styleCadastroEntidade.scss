@@ -20,12 +20,6 @@ body{
     gap: 1.8rem;
 
     display: grid;
-    grid-template-areas: 
-    ". . . . ."
-    ". logo logo . ."
-    ". logo logo main ."
-    ". logo logo main ."
-    ;
 }
 
 span{
@@ -87,8 +81,8 @@ main{
             color: rgb(60, 191, 196);
             font-size: 3rem;
             position: relative;
-            top: -4rem;
-            left: 65rem;
+            margin-top: -4rem;
+            margin-left: 65rem;
             font-weight: 50rem;
         }
 
@@ -106,12 +100,16 @@ main{
             appearance: none;
         }
 
-        .fa-circle-plus{
+        .fa-phone, .fa-circle-plus{
             color: rgb(60, 191, 196);
             font-size: 3.5rem;
             position: relative;
-            margin-top: -4rem;
+            margin-top: -4.5rem;
             margin-left: 71rem;
+        }
+
+        .fa-circle-plus{
+            margin-top: -4rem;
         }
     }
 
@@ -129,5 +127,38 @@ main{
             cursor: pointer;
             
         }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    body{
+        grid-template-areas: 
+        ". . . . ."
+        ". logo logo . ."
+        ". logo logo main ."
+        ". logo logo main ."
+        ;   
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    body{
+        grid-template-areas: 
+        ". . . ."
+        "logo logo . ."
+        "logo logo main ."
+        "logo logo main ."
+        ; 
+    }
+}
+
+@media screen and (min-width: 2560px) {
+    body{
+        grid-template-areas: 
+        ". . . . ."
+        "logo logo . . ."
+        "logo logo . main ."
+        "logo logo . main ."
+        ;   
     }
 }

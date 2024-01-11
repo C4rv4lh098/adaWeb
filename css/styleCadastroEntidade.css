@@ -15,7 +15,6 @@ body {
   background-color: #fff;
   gap: 1.8rem;
   display: grid;
-  grid-template-areas: ". . . . ." ". logo logo . ." ". logo logo main ." ". logo logo main .";
 }
 
 span {
@@ -70,8 +69,8 @@ main .data-input .fa-chevron-down {
   color: rgb(60, 191, 196);
   font-size: 3rem;
   position: relative;
-  top: -4rem;
-  left: 65rem;
+  margin-top: -4rem;
+  margin-left: 65rem;
   font-weight: 50rem;
 }
 main .data-input input, main .data-input select {
@@ -88,12 +87,15 @@ main .data-input select {
      -moz-appearance: none;
           appearance: none;
 }
-main .data-input .fa-circle-plus {
+main .data-input .fa-phone, main .data-input .fa-circle-plus {
   color: rgb(60, 191, 196);
   font-size: 3.5rem;
   position: relative;
-  margin-top: -4rem;
+  margin-top: -4.5rem;
   margin-left: 71rem;
+}
+main .data-input .fa-circle-plus {
+  margin-top: -4rem;
 }
 main .controller {
   margin-top: 8rem;
@@ -107,4 +109,20 @@ main .controller #cadastrar {
   height: 7rem;
   font-size: 2.8rem;
   cursor: pointer;
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    grid-template-areas: ". . . . ." ". logo logo . ." ". logo logo main ." ". logo logo main .";
+  }
+}
+@media screen and (min-width: 1440px) {
+  body {
+    grid-template-areas: ". . . ." "logo logo . ." "logo logo main ." "logo logo main .";
+  }
+}
+@media screen and (min-width: 2560px) {
+  body {
+    grid-template-areas: ". . . . ." "logo logo . . ." "logo logo . main ." "logo logo . main .";
+  }
 }/*# sourceMappingURL=styleCadastroEntidade.css.map */

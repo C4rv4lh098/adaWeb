@@ -19,13 +19,6 @@ body{
     gap: 2.5rem;
 
     display: grid;
-    grid-template-areas: 
-    ". . . . "
-    ". . . . "
-    ". logo . ."
-    ". logo main main"
-    ". . . . "
-    ;
 }
 
 span{
@@ -101,5 +94,29 @@ main{
             margin-top: 4rem;
             font-size: 2.5rem;
         }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    body{
+        grid-template-areas:
+        ". . . . "
+        ". . . . "
+        ". logo . ."
+        ". logo main main"
+        ". . . . "
+        ;    
+    }
+}
+
+@media screen and (min-width: 2560px) {
+    body{
+        grid-template-areas: 
+        ". . . . ."
+        ". . . . ."
+        ". logo . . ."
+        ". logo . main main"
+        ". . . . ."
+        ;  
     }
 }
