@@ -1,0 +1,164 @@
+$primaryColor: #89cd00;
+$SecondaryColor:#f4f4f4;
+$borderColor:#bebebe;
+$borderRadiusSize: 1.2rem;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    font-size: 62.5%;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    color: black;
+    font-size: 1.8rem;
+    background-color: #fff;
+    gap: 5rem;
+    align-items: center;
+    
+    display: grid;
+}
+
+header{
+    grid-area: title;
+
+    text-align: center;
+
+    h1{
+        font-size: 4.6rem;
+    }
+    span{
+        color: $primaryColor;
+    }
+}
+
+main{
+    grid-area: informations;
+    width: 80rem;
+    display: flex;
+
+    .view{
+        margin-left: 10rem;
+        width: 60rem;
+        height: 50rem;
+        border: 1px solid $borderColor;
+        border-radius: $borderRadiusSize;
+        background-color: $SecondaryColor;
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .infoCard{
+            display: flex;
+            flex-direction: row;
+            height: 8rem;
+            width: 45rem;
+            margin: 1.5rem 10rem;
+            cursor: pointer;
+            
+            font-size: 2.6rem;
+            text-align: center;
+            align-items: center;
+
+            .infoCard-name{
+                padding: 2rem;
+                width: 30rem;
+                height: 8rem;
+                border: 1px solid $borderColor;
+                border-bottom-left-radius: $borderRadiusSize;
+                border-top-left-radius: $borderRadiusSize;
+                background-color: darkcyan;
+                color: $SecondaryColor;
+                
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .infoCard-operation{
+                padding: 1rem;;
+                width: 14rem;
+                height: 8rem;
+                border-top: 1px solid $borderColor;
+                border-right: 1px solid $borderColor;
+                border-bottom: 1px solid $borderColor;
+                border-top-right-radius: $borderRadiusSize;
+                border-bottom-right-radius: $borderRadiusSize;
+                background-color: $SecondaryColor;
+                color: $primaryColor;
+                
+                display: flex;
+                align-items: center;
+            }
+
+            .fa-caret-down{
+                color: $primaryColor;
+                cursor: pointer;
+                position: absolute;
+                margin-left: 41rem;
+            }
+
+            .fa-xmark{
+                color: red;
+                cursor: pointer;
+                position: absolute;
+                margin-left: 41rem;
+                visibility: hidden;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    body{
+        grid-template-areas: 
+        ". . . . ."
+        ". . . . ."
+        ". title title title ."
+        ". . informations . ."
+        ". . . . ."
+        ;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    body{
+        grid-template-areas: 
+        ". . . . ."
+        ". . . . ."
+        ". title title title ."
+        ". . informations . ."
+        ". . . . ."
+        ;
+    }
+
+    main{
+        .view{
+            margin-left: 15rem;
+        }
+    }
+}
+
+@media screen and (min-width: 2560px) {
+    body{
+        grid-template-areas: 
+        ". . . . ."
+        ". . . . ."
+        ". title title title ."
+        ". . informations . ."
+        ". . . . ."
+        ;
+    }
+
+    main{
+        .view{
+            margin-left: 25rem;
+        }
+    }
+}
