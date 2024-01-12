@@ -28,6 +28,12 @@ header h1 {
 header span {
   color: #89cd00;
 }
+header .fa-house {
+  color: #89cd00;
+  margin-right: 5rem;
+  margin-left: -15rem;
+  cursor: pointer;
+}
 
 main {
   grid-area: informations;

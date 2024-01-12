@@ -35,6 +35,14 @@ header{
     span{
         color: $primaryColor;
     }
+
+    .fa-house{
+        color: $primaryColor;
+        margin-right: 5rem;
+        margin-left: -15rem;
+
+        cursor: pointer;
+    }
 }
 
 main{
