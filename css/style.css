@@ -85,7 +85,12 @@ main footer a {
 
 @media screen and (min-width: 1024px) {
   body {
-    grid-template-areas: ". . . . " ". . . . " ". logo . ." ". logo main main" ". . . . ";
+    grid-template-areas: ". . . . ." ". . . . ." ". logo . . ." ". logo . main main" ". . . . .";
+  }
+}
+@media screen and (min-width: 1440px) {
+  body {
+    grid-template-areas: ". . . . ." ". . . . ." ". logo . . ." ". logo . main main" ". . . . .";
   }
 }
 @media screen and (min-width: 2560px) {

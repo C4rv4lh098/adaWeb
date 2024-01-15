@@ -1,7 +1,6 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 :root {
@@ -37,8 +36,8 @@ aside img {
 
 main {
   grid-area: main;
-  width: 80rem;
-  height: 70rem;
+  width: 70rem;
+  height: 60rem;
   padding: 4.4rem;
   border: 1px solid #d4d4d4;
   border-radius: 1.2rem;
@@ -65,15 +64,7 @@ main .data-input label {
   margin-top: 3rem;
   font-size: 2.6rem;
 }
-main .data-input .fa-chevron-down {
-  color: rgb(60, 191, 196);
-  font-size: 3rem;
-  position: relative;
-  margin-top: -4rem;
-  margin-left: 65rem;
-  font-weight: 50rem;
-}
-main .data-input input, main .data-input select {
+main .data-input input, main .data-input textarea {
   color: #000;
   padding: 0.5rem;
   margin-top: 0.5rem;
@@ -82,23 +73,18 @@ main .data-input input, main .data-input select {
   border-radius: 1rem;
   border: 1px solid #d4d4d4;
 }
-main .data-input select {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+main .data-input textarea {
+  height: 10rem;
 }
-main .data-input .fa-phone, main .data-input .fa-circle-plus {
+main .data-input .fa-clipboard-list {
   color: rgb(60, 191, 196);
   font-size: 3.5rem;
   position: relative;
-  margin-top: -4.5rem;
-  margin-left: 71rem;
-}
-main .data-input .fa-circle-plus {
-  margin-top: -4rem;
+  margin-top: -15rem;
+  margin-left: 12rem;
 }
 main .controller {
-  margin-top: 8rem;
+  margin-top: 20rem;
 }
 main .controller #cadastrar {
   border: none;
@@ -113,16 +99,16 @@ main .controller #cadastrar {
 
 @media screen and (min-width: 1024px) {
   body {
-    grid-template-areas: ". . . . ." ". . . . ." ". logo logo . . ." ". logo logo . main" ". . . . .";
+    grid-template-areas: ". . . ." ". . . ." ". logo . . ." ". logo man main ." ". . . .";
   }
 }
 @media screen and (min-width: 1440px) {
   body {
-    grid-template-areas: ". . . ." ". . . ." ". logo . ." ". logo main main" ". . . .";
+    grid-template-areas: ". . . . ." ". . . . ." ". logo . . ." ". logo main main ." ". . . . .";
   }
 }
 @media screen and (min-width: 2560px) {
   body {
-    grid-template-areas: ". . . ." ". . . ." ". logo . ." ". logo main main" ". . . .";
+    grid-template-areas: ". . . . ." ". . . . ." ". logo . . ." ". logo main main ." ". . . . .";
   }
-}/*# sourceMappingURL=styleCadastroEntidade.css.map */
+}/*# sourceMappingURL=styleCadastroAtuacao.css.map */

@@ -5,9 +5,7 @@ $borderRadiusSize: 1.2rem;
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
-
 :root{
     font-size: 62.5%;
 }
@@ -45,8 +43,8 @@ aside{
 main{
     grid-area: main;
 
-    width: 80rem;
-    height: 70rem;
+    width: 70rem;
+    height: 60rem;
     padding: 4.4rem;
     border: 1px solid $borderColor;
     border-radius: $borderRadiusSize;
@@ -77,16 +75,7 @@ main{
             font-size: 2.6rem;
         }
 
-        .fa-chevron-down{
-            color: rgb(60, 191, 196);
-            font-size: 3rem;
-            position: relative;
-            margin-top: -4rem;
-            margin-left: 65rem;
-            font-weight: 50rem;
-        }
-
-        input, select{
+        input, textarea{
             color: #000;
             padding: .5rem;
             margin-top: .5rem;
@@ -96,25 +85,21 @@ main{
             border: 1px solid $borderColor;
         }
 
-        select{
-            appearance: none;
+        textarea{
+            height: 10rem;
         }
 
-        .fa-phone, .fa-circle-plus{
+        .fa-clipboard-list{
             color: rgb(60, 191, 196);
             font-size: 3.5rem;
             position: relative;
-            margin-top: -4.5rem;
-            margin-left: 71rem;
-        }
-
-        .fa-circle-plus{
-            margin-top: -4rem;
+            margin-top: -15rem;
+            margin-left: 12rem;
         }
     }
 
     .controller{
-        margin-top: 8rem;
+        margin-top: 20rem;
 
         #cadastrar{
             border: none;
@@ -129,39 +114,36 @@ main{
         }
     }
 }
-
 @media screen and (min-width: 1024px) {
     body{
         grid-template-areas: 
-        ". . . . ."
-        ". . . . ."
-        ". logo logo . . ."
-        ". logo logo . main"
-        ". . . . ."
-        ;   
-    }
+        ". . . ."
+        ". . . ."
+        ". logo . . ."
+        ". logo man main ."
+        ". . . ."
+        ;
+    }    
 }
-
 @media screen and (min-width: 1440px) {
     body{
         grid-template-areas: 
-        ". . . ."
-        ". . . ."
-        ". logo . ."
-        ". logo main main"
-        ". . . ."
-        ; 
-    }
+        ". . . . ."
+        ". . . . ."
+        ". logo . . ."
+        ". logo main main ."
+        ". . . . ."
+        ;
+    }    
 }
-
 @media screen and (min-width: 2560px) {
     body{
         grid-template-areas: 
-        ". . . ."
-        ". . . ."
-        ". logo . ."
-        ". logo main main"
-        ". . . ."
-        ;   
-    }
+        ". . . . ."
+        ". . . . ."
+        ". logo . . ."
+        ". logo main main ."
+        ". . . . ."
+        ;
+    }    
 }

@@ -100,11 +100,22 @@ main{
 @media screen and (min-width: 1024px) {
     body{
         grid-template-areas:
-        ". . . . "
-        ". . . . "
-        ". logo . ."
-        ". logo main main"
-        ". . . . "
+        ". . . . ."
+        ". . . . ."
+        ". logo . . ."
+        ". logo . main main"
+        ". . . . ."
+        ;    
+    }
+}
+@media screen and (min-width: 1440px) {
+    body{
+        grid-template-areas:
+        ". . . . ."
+        ". . . . ."
+        ". logo . . ."
+        ". logo . main main"
+        ". . . . ."
         ;    
     }
 }
