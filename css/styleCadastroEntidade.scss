@@ -1,6 +1,9 @@
 $primaryColor: #89cd00;
-$borderColor:#d4d4d4;
+$SecondaryColor: #f4f4f4;
+$borderColor: #bebebe;
 $borderRadiusSize: 1.2rem;
+$cardColor: darkcyan;
+$whiteTextColor: #fff;
 
 *{
     margin: 0;
@@ -46,7 +49,7 @@ main{
     grid-area: main;
 
     width: 80rem;
-    height: 70rem;
+    height: 75rem;
     padding: 4.4rem;
     border: 1px solid $borderColor;
     border-radius: $borderRadiusSize;

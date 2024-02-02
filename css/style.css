@@ -13,7 +13,7 @@ body {
   color: black;
   font-size: 1.8rem;
   background-color: #fff;
-  gap: 2.5rem;
+  gap: 4.3rem;
   display: grid;
 }
 
@@ -41,7 +41,7 @@ main {
   height: 60rem;
   padding: 4.4rem;
   text-align: center;
-  border: 1px solid #d4d4d4;
+  border: 1px solid #bebebe;
   border-radius: 1.2rem;
 }
 main h2 {
@@ -71,16 +71,32 @@ main .controller a {
 main .controller a + a {
   background-color: #89cd00;
 }
-main footer {
+main .footer {
   margin: 2rem;
 }
-main footer p {
+main .footer p {
   margin: 1rem;
   font-size: 2rem;
 }
-main footer a {
+main .footer a {
   margin-top: 4rem;
   font-size: 2.5rem;
+}
+
+footer {
+  grid-area: footer;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  color: #89cd00;
+  background-color: #f4f4f4;
+}
+footer span {
+  padding: 1.5rem;
+  height: 4rem;
+  font-size: 2rem;
 }
 
 @media screen and (min-width: 1024px) {
@@ -90,7 +106,7 @@ main footer a {
 }
 @media screen and (min-width: 1440px) {
   body {
-    grid-template-areas: ". . . . ." ". . . . ." ". logo . . ." ". logo . main main" ". . . . .";
+    grid-template-areas: ". . . . ." ". logo . . ." ". logo . main main" ". . . . ." "footer footer footer footer footer";
   }
 }
 @media screen and (min-width: 2560px) {

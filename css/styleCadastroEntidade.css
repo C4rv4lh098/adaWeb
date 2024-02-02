@@ -38,9 +38,9 @@ aside img {
 main {
   grid-area: main;
   width: 80rem;
-  height: 70rem;
+  height: 75rem;
   padding: 4.4rem;
-  border: 1px solid #d4d4d4;
+  border: 1px solid #bebebe;
   border-radius: 1.2rem;
 }
 main .fa-chevron-left {
@@ -80,7 +80,7 @@ main .data-input input, main .data-input select {
   height: 5rem;
   width: 70rem;
   border-radius: 1rem;
-  border: 1px solid #d4d4d4;
+  border: 1px solid #bebebe;
 }
 main .data-input select {
   -webkit-appearance: none;

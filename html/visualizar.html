@@ -9,33 +9,107 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/d46481d276.js" crossorigin="anonymous"></script>
+    <script src="../js/viewFunction.js"></script>
 </head>
-<body>
+<body onload="accordion()">
     <header>
         <h1><a href="index.html"><i class="fa-solid fa-house" title="Voltar para o início"></i></a>Entidades <span>Parceiras</span></h1>
     </header>
     <main>
         <div class="view">
-            <div class="infoCard">
-                <div class="infoCard-name">Casa Pet</div>
-                <div class="infoCard-operation">Abrigo</div>
-                <i class="fa-solid fa-caret-down" title="Mais Informações..."></i>
-                <!-- <i class="fa-solid fa-xmark" title="Fechar Informações"></i> -->
-            </div>
-            <div class="infoCard">
-                <div class="infoCard-name">Pet Socorro - Clinica Veterinária</div>
-                <div class="infoCard-operation">Clínica</div>
-                <i class="fa-solid fa-caret-down" title="Mais Informações..."></i>
-            </div>
-            <div class="infoCard">
-                <div class="infoCard-name">Resgate Amigos!</div>
-                <div class="infoCard-operation">Resgate</div>
-                <i class="fa-solid fa-caret-down" title="Mais Informações..."></i>
-            </div>
-            <div class="infoCard">
-                <div class="infoCard-name">Em Busca do Amor</div>
-                <div class="infoCard-operation">Adoção</div>
-                <i class="fa-solid fa-caret-down" title="Mais Informações..."></i>
+            <div class="accordion">
+                <div class="box">
+                    <div class="title">
+                        <div class="infoCard">
+                            <div class="infoCard-name">Casa Pet</div>
+                            <div class="infoCard-operation">Abrigo</div>
+                            <i class="fa-solid fa-plus" title="Mais Informações..."></i>
+                            <i id="plusX" class="fa-solid fa-plus" title="Fechar"></i>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                    <div class="content">
+                        <div class="moreInfo">
+                            <div class="moreInfo-card">
+                                <label for="moreInfo-phone">Telefone: </label>
+                                <div class="moreInfo-phone">(92) 91234-5678</div>
+                            </div>
+                            <div class="moreInfo-card">
+                                <label for="moreInfo-location">Localização: </label>
+                                <div class="moreInfo-location">Rua Ponto de Coleta</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="title">
+                        <div class="infoCard">
+                            <div class="infoCard-name">Pet Socorro - Clinica Veterinária</div>
+                            <div class="infoCard-operation">Clínica</div>
+                            <i class="fa-solid fa-plus" title="Mais Informações..."></i>
+                            <i id="plusX" class="fa-solid fa-plus" title="Fechar"></i>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                    <div class="content">
+                        <div class="moreInfo">
+                            <div class="moreInfo-card">
+                                <label for="moreInfo-phone">Telefone: </label>
+                                <div class="moreInfo-phone">(92) 98765-4321</div>
+                            </div>
+                            <div class="moreInfo-card">
+                                <label for="moreInfo-location">Localização: </label>
+                                <div class="moreInfo-location">Clinica Pet Socorro, Av. Nobre Coração</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="title">
+                        <div class="infoCard">
+                            <div class="infoCard-name">Resgate Amigos!</div>
+                            <div class="infoCard-operation">Resgate</div>
+                            <i class="fa-solid fa-plus" title="Mais Informações..."></i>
+                            <i id="plusX" class="fa-solid fa-plus" title="Fechar"></i>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                    <div class="content">
+                        <div class="moreInfo">
+                            <div class="moreInfo-card">
+                                <label for="moreInfo-phone">Telefone: </label>
+                                <div class="moreInfo-phone">(92) 98808-4562</div>
+                            </div>
+                            <div class="moreInfo-card">
+                                <label for="moreInfo-location">Localização: </label>
+                                <div class="moreInfo-location">Rua Professora Socorro</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="title">
+                        <div class="infoCard">
+                            <div class="infoCard-name">Em Busca do Amor</div>
+                            <div class="infoCard-operation">Adoção</div>
+                            <i class="fa-solid fa-plus" title="Mais Informações..."></i>
+                            <i id="plusX" class="fa-solid fa-plus" title="Fechar"></i>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                    <div class="content">
+                        <div class="moreInfo">
+                            <div class="moreInfo-card">
+                                <label for="moreInfo-phone">Telefone: </label>
+                                <div class="moreInfo-phone">(92) 98765-4321</div>
+                            </div>
+                            <div class="moreInfo-card">
+                                <label for="moreInfo-location">Localização: </label>
+                                <div class="moreInfo-location">Av. Coração Amigo, esquina com o Mercado Vila Nova</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </main>

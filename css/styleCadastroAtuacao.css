@@ -39,7 +39,7 @@ main {
   width: 70rem;
   height: 60rem;
   padding: 4.4rem;
-  border: 1px solid #d4d4d4;
+  border: 1px solid #bebebe;
   border-radius: 1.2rem;
 }
 main .fa-chevron-left {
@@ -71,7 +71,7 @@ main .data-input input, main .data-input textarea {
   height: 5rem;
   width: 70rem;
   border-radius: 1rem;
-  border: 1px solid #d4d4d4;
+  border: 1px solid #bebebe;
 }
 main .data-input textarea {
   height: 10rem;

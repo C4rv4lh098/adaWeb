@@ -1,42 +1,44 @@
 $primaryColor: #89cd00;
-$SecondaryColor:#f4f4f4;
-$borderColor:#bebebe;
+$SecondaryColor: #f4f4f4;
+$borderColor: #bebebe;
 $borderRadiusSize: 1.2rem;
+$cardColor: darkcyan;
+$whiteTextColor: #fff;
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-:root{
+:root {
     font-size: 62.5%;
 }
 
-body{
-    font-family: 'Roboto', sans-serif;
+body {
+    font-family: "Roboto", sans-serif;
     color: black;
     font-size: 1.8rem;
-    background-color: #fff;
-    gap: 5rem;
+    background-color: $whiteTextColor;
+    gap: 2.5rem;
     align-items: center;
-    
+
     display: grid;
 }
 
-header{
+header {
     grid-area: title;
 
     text-align: center;
 
-    h1{
+    h1 {
         font-size: 4.6rem;
     }
-    span{
+    span {
         color: $primaryColor;
     }
 
-    .fa-house{
+    .fa-house {
         color: $primaryColor;
         margin-right: 5rem;
         margin-left: -15rem;
@@ -45,127 +47,214 @@ header{
     }
 }
 
-main{
+main {
     grid-area: informations;
     width: 80rem;
     display: flex;
+    margin-bottom: 15rem;
 
-    .view{
+    .view {
         margin-left: 10rem;
         width: 60rem;
-        height: 50rem;
+        height: fit-content;
         border: 1px solid $borderColor;
         border-radius: $borderRadiusSize;
         background-color: $SecondaryColor;
-        
+
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
 
-        .infoCard{
-            display: flex;
-            flex-direction: row;
-            height: 8rem;
-            width: 45rem;
-            margin: 1.5rem 10rem;
-            cursor: pointer;
-            
-            font-size: 2.6rem;
-            text-align: center;
-            align-items: center;
+        .accordion {
+            margin: 3rem 1rem;
+            min-width: 50rem;
+            max-width: 60rem;
 
-            .infoCard-name{
-                padding: 2rem;
-                width: 30rem;
-                height: 8rem;
-                border: 1px solid $borderColor;
-                border-bottom-left-radius: $borderRadiusSize;
-                border-top-left-radius: $borderRadiusSize;
-                background-color: darkcyan;
-                color: $SecondaryColor;
-                
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-            .infoCard-operation{
-                padding: 1rem;;
-                width: 14rem;
-                height: 8rem;
-                border-top: 1px solid $borderColor;
-                border-right: 1px solid $borderColor;
-                border-bottom: 1px solid $borderColor;
-                border-top-right-radius: $borderRadiusSize;
-                border-bottom-right-radius: $borderRadiusSize;
-                background-color: $SecondaryColor;
-                color: $primaryColor;
-                
-                display: flex;
-                align-items: center;
+            .box {
+                position: relative;
+                margin: 1rem 2rem;
+
+                .title {
+                    display: flex;
+                    flex-direction: row;
+                    color: $whiteTextColor;
+                    cursor: pointer;
+                }
+
+                .infoCard {
+                    display: flex;
+                    flex-direction: row;
+                    height: 8rem;
+                    width: 45rem;
+                    cursor: pointer;
+
+                    font-size: 2.6rem;
+                    text-align: center;
+                    align-items: center;
+
+                    .infoCard-name {
+                        padding: 2rem;
+                        width: 30rem;
+                        height: 8rem;
+                        border-top-left-radius: $borderRadiusSize;
+                        border-bottom-left-radius: $borderRadiusSize;
+                        background-color: $cardColor;
+                        color: $SecondaryColor;
+
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                    .infoCard-operation {
+                        padding: 1rem;
+                        width: 14rem;
+                        height: 8rem;
+                        border-top: 1px solid $borderColor;
+                        border-right: 1px solid $borderColor;
+                        border-bottom: 1px solid $borderColor;
+                        border-top-right-radius: $borderRadiusSize;
+                        border-bottom-right-radius: $borderRadiusSize;
+                        background-color: $SecondaryColor;
+                        color: $primaryColor;
+
+                        display: flex;
+                        align-items: center;
+                    }
+
+                    .fa-plus {
+                        color: $primaryColor;
+                        cursor: pointer;
+                        position: absolute;
+                        margin-left: 41rem;
+                        transition: 0.2s;
+                    }
+
+                    #plusX {
+                        color: rgb(226, 90, 90);
+                        cursor: pointer;
+                        position: absolute;
+                        margin-left: 41rem;
+                        visibility: hidden;
+                        transition: 0.2s;
+                    }
+                }
+
+                .content {
+                    width: 44rem;
+                    display: flex;
+                    flex-direction: column;
+                    position: relative;
+                    height: 0;
+                    overflow: hidden;
+                    transform: 0.5s;
+                    overflow-y: auto;
+                    background-color: $cardColor;
+
+                    .moreInfo {
+                        padding: 1rem;
+                        color: $whiteTextColor;
+
+                        .moreInfo-card {
+                            margin-top: 1rem;
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                            font-size: 2rem;
+
+                            label {
+                                display: block;
+                                margin: 1rem;
+                            }
+                        }
+                    }
+                }
             }
 
-            .fa-caret-down{
-                color: $primaryColor;
-                cursor: pointer;
-                position: absolute;
-                margin-left: 41rem;
-            }
+            .box.active {
+                .infoCard {
+                    .infoCard-name {
+                        border-bottom-left-radius: 0;
+                    }
+                    .infoCard-operation {
+                        border-bottom-right-radius: 0;
+                    }
 
-            .fa-xmark{
-                color: red;
-                cursor: pointer;
-                position: absolute;
-                margin-left: 41rem;
-                visibility: hidden;
+                    .fa-plus {
+                        transform: rotateZ(45deg);
+                        visibility: hidden;
+                    }
+
+                    #plusX {
+                        transform: rotateZ(45deg);
+                        visibility: visible;
+                    }
+                }
+
+                .line {
+                    margin-top: -0.6rem;
+                    width: 44rem;
+                    height: 0.8rem;
+                    background-color: $primaryColor;
+                }
+
+                .content {
+                    border: 0.2rem solid $primaryColor;
+                    height: 15rem;
+                    border-bottom-left-radius: $borderRadiusSize;
+                    border-bottom-right-radius: $borderRadiusSize;
+                }
             }
         }
     }
 }
 
 @media screen and (min-width: 1024px) {
-    body{
-        grid-template-areas: 
-        ". . . . ."
-        ". . . . ."
-        ". title title title ."
-        ". . informations . ."
-        ". . . . ."
-        ;
+    body {
+        grid-template-areas:
+            ". . . . ."
+            ". . . . ."
+            ". title title title ."
+            ". . . . ."
+            ". . informations . ."
+            ". . . . ."
+            ;
     }
 }
 
 @media screen and (min-width: 1440px) {
-    body{
-        grid-template-areas: 
-        ". . . . ."
-        ". . . . ."
-        ". title title title ."
-        ". . informations . ."
-        ". . . . ."
-        ;
+    body {
+        grid-template-areas:
+            ". . . . ."
+            ". . . . ."
+            ". title title title ."
+            ". . . . ."
+            ". . informations . ."
+            ". . . . ."
+            ;
     }
 
-    main{
-        .view{
+    main {
+        .view {
             margin-left: 15rem;
         }
     }
 }
 
 @media screen and (min-width: 2560px) {
-    body{
-        grid-template-areas: 
-        ". . . . ."
-        ". . . . ."
-        ". title title title ."
-        ". . informations . ."
-        ". . . . ."
-        ;
+    body {
+        grid-template-areas:
+            ". . . . ."
+            ". . . . ."
+            ". title title title ."
+            ". . . . ."
+            ". . informations . ."
+            ". . . . ."
+            ;
     }
 
-    main{
-        .view{
+    main {
+        .view {
             margin-left: 25rem;
         }
     }
